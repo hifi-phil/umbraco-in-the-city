@@ -66,6 +66,10 @@ const config = {
         bayon: ["Bayon", "sans-serif"],
         "share-tech": ["Share Tech Mono", "monospace"],
       },
+      fontSize: {
+        "hero": ["218px", "166px"], // [font-size, line-height]
+        "hero-sub": ["81px", "80px"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -75,10 +79,31 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "wing-flutter": {
+          "0%, 100%": { transform: "rotate(-15deg) scaleY(1)" },
+          "25%": { transform: "rotate(-25deg) scaleY(0.8)" },
+          "50%": { transform: "rotate(-10deg) scaleY(1.1)" },
+          "75%": { transform: "rotate(-30deg) scaleY(0.7)" },
+        },
+        "wing-flutter-opposite": {
+          "0%, 100%": { transform: "rotate(15deg) scaleY(1)" },
+          "25%": { transform: "rotate(25deg) scaleY(0.8)" },
+          "50%": { transform: "rotate(10deg) scaleY(1.1)" },
+          "75%": { transform: "rotate(30deg) scaleY(0.7)" },
+        },
+        "buzz-hover": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-2px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "wing-left": "wing-flutter 0.15s ease-in-out infinite",
+        "wing-right": "wing-flutter-opposite 0.15s ease-in-out infinite",
+        "wing-left-secondary": "wing-flutter 0.15s ease-in-out infinite 0.05s",
+        "wing-right-secondary": "wing-flutter-opposite 0.15s ease-in-out infinite 0.05s",
+        "buzz-hover": "buzz-hover 0.3s ease-in-out infinite",
       },
     },
   },

@@ -1,9 +1,24 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Bayon, Share_Tech_Mono } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+
+const bayon = Bayon({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bayon",
+  display: "swap",
+})
+
+const shareTechMono = Share_Tech_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-share-tech",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Umbraco in the City - Manchester",
@@ -20,7 +35,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-brand-dark antialiased")}>
+      <body className={cn("min-h-screen bg-brand-dark antialiased", bayon.variable, shareTechMono.variable)}>
         <div className="text-white min-h-screen overflow-hidden relative">
           <Header 
             targetDate={targetDate}

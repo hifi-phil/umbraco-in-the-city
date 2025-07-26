@@ -65,8 +65,8 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
         anton: ["var(--font-anton)", "sans-serif"],
-        bayon: ["Bayon", "sans-serif"],
-        "share-tech": ["Share Tech Mono", "monospace"],
+        bayon: ["var(--font-bayon)", "sans-serif"],
+        "share-tech": ["var(--font-share-tech)", "monospace"],
       },
       fontSize: {
         "hero": ["218px", "166px"], // [font-size, line-height] - 1320px+

@@ -13,15 +13,19 @@ export default function BeeIcon({ variant = "default", className = "" }: BeeIcon
   const [currentFrame, setCurrentFrame] = useState(5) // Start with static frame (state6 - index 5)
   const [isAnimating, setIsAnimating] = useState(false)
   
-  // Animation frames in order
-  const frames = [
-    "/assets/bee-frames/bee-state1.svg",
-    "/assets/bee-frames/bee-state2.svg", 
-    "/assets/bee-frames/bee-state3.svg",
-    "/assets/bee-frames/bee-state4.svg",
-    "/assets/bee-frames/bee-state5.svg",
-    "/assets/bee-frames/bee-state6.svg"
+  // Animation frames in order - different paths for different variants
+  const baseFrames = [
+    "bee-state1.svg",
+    "bee-state2.svg", 
+    "bee-state3.svg",
+    "bee-state4.svg",
+    "bee-state5.svg",
+    "bee-state6.svg"
   ]
+  
+  const frames = baseFrames.map(frame => 
+    `/assets/bee-frames${isFooter ? '-footer' : ''}/${frame}`
+  )
   
   useEffect(() => {
     let interval: NodeJS.Timeout
@@ -52,11 +56,6 @@ export default function BeeIcon({ variant = "default", className = "" }: BeeIcon
       className={`relative group cursor-pointer ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{
-        // Set CSS custom properties based on variant
-        "--bee-wing-color": isFooter ? "#FFCC33" : "#171717",
-        "--bee-body-color": isFooter ? "#171717" : "#FFCC33"
-      } as React.CSSProperties}
     >
       <div className="relative group-hover:animate-buzz-hover">
         <Image
@@ -65,6 +64,9 @@ export default function BeeIcon({ variant = "default", className = "" }: BeeIcon
           width={isFooter ? 96 : 80}
           height={isFooter ? 68 : 70}
           className={`w-${isFooter ? "24" : "20"} h-auto transition-transform duration-75`}
+          style={{
+            transform: isFooter ? "rotate(16deg)" : "rotate(-18deg)"
+          }}
         />
       </div>
     </div>

@@ -16,6 +16,7 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "xl-1320": "1320px",
       },
     },
     extend: {
@@ -67,7 +68,12 @@ const config = {
         "share-tech": ["Share Tech Mono", "monospace"],
       },
       fontSize: {
-        "hero": ["218px", "166px"], // [font-size, line-height]
+        "hero": ["218px", "166px"], // [font-size, line-height] - 1320px+
+        "hero-xl": ["180px", "140px"], // 1024px - 1319px  
+        "hero-lg": ["140px", "120px"], // 1024px - 1319px  
+        "hero-md": ["140px", "120px"], // 768px - 1023px
+        "hero-sm": ["120px", "100px"], // 640px - 767px
+        "hero-xs": ["80px", "60px"], // below 640px
         "hero-sub": ["81px", "80px"],
       },
       keyframes: {

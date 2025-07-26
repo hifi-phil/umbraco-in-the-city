@@ -55,6 +55,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         "brand-yellow": "#FFCC33",
+        "brand-dark": "#171717",
       },
       borderRadius: {
         lg: "var(--radius)",

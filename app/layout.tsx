@@ -23,7 +23,12 @@ const shareTechMono = Share_Tech_Mono({
 export const metadata: Metadata = {
   title: "Umbraco in the City - Manchester",
   description: "Join the Umbraco community in Manchester for a day of inspiring talks, workshops, and networking.",
-    generator: 'claude.code'
+  generator: 'claude.code',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

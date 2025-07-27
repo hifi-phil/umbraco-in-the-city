@@ -6,6 +6,20 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Landscape mobile specific height fix */
+  @media (orientation: landscape) and (min-width: 640px) and (max-width: 800px) {
+    .hero-landscape-only {
+      height: 230vh !important;
+    }
+  }
+
+    /* Landscape mobile specific height fix */
+  @media (orientation: landscape) and (min-width: 800px) and (max-width: 950px) {
+    .hero-landscape-only {
+      height: 200vh !important;
+    }
+  }
 }
 
 @layer base {

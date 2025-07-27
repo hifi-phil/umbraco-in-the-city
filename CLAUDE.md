@@ -17,7 +17,7 @@ This is a Next.js 15 conference website for "Umbraco in the City - Manchester" s
 - `npm run start` - Start production server
 
 ## Development Server
-The project runs on `http://localhost:3001` during development.
+The project runs on `http://localhost:3000` during development.
 
 ## Visual Development Workflow
 

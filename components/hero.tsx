@@ -11,7 +11,7 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, location, date, venue }: HeroProps) {
   return (
-    <section className="relative h-[50vh] sm:h-screen px-8 z-10">
+    <section className="relative h-[50vh] sm:h-screen hero-landscape-only px-8 z-10">
       {/* Small pattern - xs and sm */}
       <div 
         className="absolute inset-0 block md:hidden"

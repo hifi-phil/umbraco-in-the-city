@@ -22,9 +22,9 @@ export default function Hero({ title, subtitle, location, date, venue }: HeroPro
           backgroundPosition: 'top center'
         }}
       />
-      {/* Medium pattern - md and lg */}
+      {/* Medium pattern - md to 1800px */}
       <div 
-        className="absolute inset-0 hidden md:block xl:hidden"
+        className="absolute inset-0 hidden md:block hero-mobile-pattern"
         style={{
           backgroundImage: "url('/assets/pattern-mobile.svg')",
           backgroundSize: 'cover',
@@ -32,9 +32,9 @@ export default function Hero({ title, subtitle, location, date, venue }: HeroPro
           backgroundPosition: 'center'
         }}
       />
-      {/* Large pattern - xl and above */}
+      {/* Large pattern - 1800px and above */}
       <div 
-        className="absolute inset-0 hidden xl:block"
+        className="absolute inset-0 hidden hero-desktop-pattern"
         style={{
           backgroundImage: "url('/assets/pattern-desktop.svg')",
           backgroundSize: 'cover',

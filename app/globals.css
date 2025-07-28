@@ -138,8 +138,24 @@
     animation-iteration-count: 1, 28;
   }
 
+  /* Hero pattern breakpoints */
+  @media (min-width: 1800px) {
+    .hero-desktop-pattern {
+      display: block !important;
+    }
+    .hero-mobile-pattern {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 1799px) {
+    .hero-desktop-pattern {
+      display: none !important;
+    }
+  }
+
   /* Only show flying bee on desktop screens */
-  @media (max-width: 1919px) {
+  @media (max-width: 1400px) {
     .flying-bee {
       display: none;
     }

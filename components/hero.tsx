@@ -43,12 +43,19 @@ export default function Hero({ title, subtitle, location, date, venue }: HeroPro
         }}
       />
       <div className="flex items-center justify-center h-full px-8 pt-40 xxs:pt-48 sm:pt-8">
-        <div className="max-w-4xl text-left space-y-1">
+        <div className="max-w-4xl text-left space-y-1 relative">
           <h1 className="font-bayon text-hero-xs sm:text-hero-sm md:text-hero-md lg:text-hero-lg xl:text-hero-xl tracking-normal text-white">
             {title}
             <br />
             <span className="text-brand-yellow">{subtitle}</span>
           </h1>
+          
+          {/* Flying bee animation for desktop 1920+ */}
+          <div className="flying-bee" style={{
+            top: '20px',
+            right: '-120px',
+            zIndex: 20
+          }} />
           
           <p className="font-bayon text-3xl sm:text-5xl lg:text-hero-sub tracking-tight text-brand-yellow">
             {location}

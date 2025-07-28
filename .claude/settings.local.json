@@ -4,7 +4,9 @@
       "mcp__Framelink_Figma_MCP__get_figma_data",
       "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_resize",
-      "mcp__playwright__browser_snapshot"
+      "mcp__playwright__browser_snapshot",
+      "Bash(vercel:*)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }

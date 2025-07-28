@@ -7,6 +7,81 @@
     text-wrap: balance;
   }
   
+  /* Bee sprite sheet animation */
+  .bee-sprite {
+    background-image: url('/assets/bee-frames/bee-state6.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.05s ease-in-out;
+  }
+  
+  .bee-sprite-footer {
+    background-image: url('/assets/bee-frames-footer/bee-state6.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.05s ease-in-out;
+  }
+  
+  /* Preload all bee frames for smooth animation */
+  .bee-frames-preload::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: 
+      url('/assets/bee-frames/bee-state1.svg'),
+      url('/assets/bee-frames/bee-state2.svg'),
+      url('/assets/bee-frames/bee-state3.svg'),
+      url('/assets/bee-frames/bee-state4.svg'),
+      url('/assets/bee-frames/bee-state5.svg'),
+      url('/assets/bee-frames/bee-state6.svg');
+  }
+  
+  .bee-frames-footer-preload::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: 
+      url('/assets/bee-frames-footer/bee-state1.svg'),
+      url('/assets/bee-frames-footer/bee-state2.svg'),
+      url('/assets/bee-frames-footer/bee-state3.svg'),
+      url('/assets/bee-frames-footer/bee-state4.svg'),
+      url('/assets/bee-frames-footer/bee-state5.svg'),
+      url('/assets/bee-frames-footer/bee-state6.svg');
+  }
+
+  /* Step-based animation for instant frame switching */
+  @keyframes bee-flap {
+    0% { background-image: url('/assets/bee-frames/bee-state1.svg'); }
+    16.67% { background-image: url('/assets/bee-frames/bee-state2.svg'); }
+    33.33% { background-image: url('/assets/bee-frames/bee-state3.svg'); }
+    50% { background-image: url('/assets/bee-frames/bee-state4.svg'); }
+    66.67% { background-image: url('/assets/bee-frames/bee-state5.svg'); }
+    83.33% { background-image: url('/assets/bee-frames/bee-state6.svg'); }
+    100% { background-image: url('/assets/bee-frames/bee-state1.svg'); }
+  }
+  
+  @keyframes bee-flap-footer {
+    0% { background-image: url('/assets/bee-frames-footer/bee-state1.svg'); }
+    16.67% { background-image: url('/assets/bee-frames-footer/bee-state2.svg'); }
+    33.33% { background-image: url('/assets/bee-frames-footer/bee-state3.svg'); }
+    50% { background-image: url('/assets/bee-frames-footer/bee-state4.svg'); }
+    66.67% { background-image: url('/assets/bee-frames-footer/bee-state5.svg'); }
+    83.33% { background-image: url('/assets/bee-frames-footer/bee-state6.svg'); }
+    100% { background-image: url('/assets/bee-frames-footer/bee-state1.svg'); }
+  }
+  
+  .bee-animate {
+    animation: bee-flap 0.1s steps(6, end) infinite;
+  }
+  
+  .bee-animate-footer {
+    animation: bee-flap-footer 0.1s steps(6, end) infinite;
+  }
+  
   /* Landscape mobile specific height fix */
   @media (orientation: landscape) and (min-width: 640px) and (max-width: 800px) {
     .hero-landscape-only {

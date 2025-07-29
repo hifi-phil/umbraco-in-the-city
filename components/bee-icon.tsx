@@ -44,7 +44,7 @@ export default function BeeIcon({ variant = "default", className = "" }: BeeIcon
             height: isFooter ? 68 : 70,
             transform: isFooter ? "rotate(16deg)" : "rotate(-18deg)"
           }}
-          aria-label={isFooter ? "Bee Logo" : "Bee Icon"}
+          aria-hidden="true"
         />
       </div>
     </div>

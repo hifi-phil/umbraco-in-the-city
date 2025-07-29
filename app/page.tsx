@@ -2,8 +2,41 @@ import type React from "react"
 import PatternButton from "@/components/pattern-button"
 import Hero from "@/components/hero"
 import ContentSection from "@/components/content-section"
+import EventSchedule, { type ScheduleDay } from "@/components/event-schedule"
 
 export default function ConferencePage() {
+
+  // Schedule data
+  const scheduleData: ScheduleDay[] = [
+    {
+      day: "Thursday",
+      date: "November 6th",
+      items: [
+        {
+          time: "1pm - 5pm",
+          activity: "Community Activities",
+          description: "Hackathons, Open discussions, Workshops... we've not quite decided yet! But something will be happening at the same time as the Partner Summit"
+        },
+        {
+          time: "6pm - 9pm",
+          activity: "After Event Social",
+          description: "Joining the Business Partner Summit & Sixes Cricket"
+        }
+      ]
+    },
+    {
+      day: "Friday",
+      date: "November 7th",
+      items: [
+        {
+          time: "9am - 6pm",
+          activity: "Umbraco In The City Event",
+          description: "Main conference day with talks, workshops, and networking"
+        }
+      ]
+    }
+  ]
+
   return (
     <main className="relative z-10">
         <Hero 
@@ -19,11 +52,13 @@ export default function ConferencePage() {
           <ContentSection 
             title="About"
             content={[
-              "Join the Umbraco community in Manchester for a day of inspiring talks, workshops, and networking. Connect with fellow developers, content creators, and Umbraco enthusiasts from around the world.",
+              "Join the Umbraco community in Manchester for a day of inspiring talks and networking. Connect with fellow developers and Umbraco enthusiasts from around the world.",
               "Whether you're a seasoned Umbraco developer or just getting started, this conference offers something for everyone. Learn about the latest features, best practices, and future of Umbraco."
             ]}
             showBeeIcon={true}
           />
+
+          <EventSchedule title="Event Schedule" scheduleData={scheduleData} />
 
           <ContentSection 
             title="Speakers"

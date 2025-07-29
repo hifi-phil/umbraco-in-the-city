@@ -11,14 +11,21 @@ const anton = Anton({
   weight: ["400"],
 })
 
+interface TimeLeft {
+  days?: number
+  hours?: number
+  minutes?: number
+  seconds?: number
+}
+
 interface CountdownProps {
   targetDate: string
 }
 
 const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date(targetDate) - +new Date()
-    let timeLeft = {}
+    let timeLeft: TimeLeft = {}
 
     if (difference > 0) {
       timeLeft = {
@@ -48,13 +55,13 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
   return (
     <div className={cn("text-2xl md:text-3xl font-mono text-brand-yellow tracking-widest", anton.className)}>
-      <span>{formatTime((timeLeft as any).days)}</span>
+      <span>{formatTime(timeLeft.days)}</span>
       <span className="mx-1 md:mx-2">:</span>
-      <span>{formatTime((timeLeft as any).hours)}</span>
+      <span>{formatTime(timeLeft.hours)}</span>
       <span className="mx-1 md:mx-2">:</span>
-      <span>{formatTime((timeLeft as any).minutes)}</span>
+      <span>{formatTime(timeLeft.minutes)}</span>
       <span className="mx-1 md:mx-2">:</span>
-      <span>{formatTime((timeLeft as any).seconds)}</span>
+      <span>{formatTime(timeLeft.seconds)}</span>
     </div>
   )
 }

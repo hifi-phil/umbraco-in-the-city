@@ -18,7 +18,7 @@ export default function ConferencePage() {
           description: "Hackathons, Open discussions, Workshops... we've not quite decided yet! But something will be happening at the same time as the Partner Summit"
         },
         {
-          time: "6pm - 9pm",
+          time: "Evening",
           activity: "After Event Social",
           description: "Joining the Business Partner Summit & Sixes Cricket"
         }

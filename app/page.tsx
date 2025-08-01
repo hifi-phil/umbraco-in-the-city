@@ -72,7 +72,7 @@ export default function ConferencePage() {
 
         <ContentSection
           title="TICKETS"
-          content="Tickets will be available soon. Sign up to be notified when they go live."
+          content="Tickets will be available soon."
         >
           <PatternButton disabled>Buy Tickets</PatternButton>
         </ContentSection>

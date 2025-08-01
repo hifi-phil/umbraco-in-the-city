@@ -14,8 +14,18 @@ export default function ConferencePage() {
         {
           time: "1pm - 5pm",
           activity: "Community Activities",
-          description:
-            "Hackathons, Open discussions, Workshops... we've not quite decided yet! But something will be happening at the same time as the Partner Summit",
+          description: (
+            <>
+              Hackathons, Open discussions, Workshops... we've not quite decided{" "}
+              yet! But something will be happening at the same time as the{" "}
+              <a
+                className="underline hover:no-underline"
+                href="https://umbraco.com/umbraco-uk-summit-2025/"
+              >
+                Partner Summit
+              </a>
+            </>
+          ),
         },
         {
           time: "Evening",

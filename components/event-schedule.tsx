@@ -1,31 +1,33 @@
 interface ScheduleItem {
-  time: string
-  activity: string
-  description?: string
+  time: string;
+  activity: string;
+  description?: React.ReactNode;
 }
 
 interface ScheduleDay {
-  day: string
-  date: string
-  items: ScheduleItem[]
+  day: string;
+  date: string;
+  items: ScheduleItem[];
 }
 
 interface EventScheduleProps {
-  title: string
-  scheduleData: ScheduleDay[]
+  title: string;
+  scheduleData: ScheduleDay[];
 }
 
-export type { ScheduleItem, ScheduleDay }
+export type { ScheduleItem, ScheduleDay };
 
-export default function EventSchedule({ title, scheduleData }: EventScheduleProps) {
-
+export default function EventSchedule({
+  title,
+  scheduleData,
+}: EventScheduleProps) {
   return (
     <section className="border-t border-brand-yellow pt-8 md:pt-16">
       <div className="space-y-8">
         <h2 className="font-bayon text-5xl lg:text-6xl text-brand-yellow tracking-wide">
           {title}
         </h2>
-        
+
         <div className="space-y-8 md:space-y-12">
           {scheduleData.map((day, dayIndex) => (
             <div key={dayIndex} className="space-y-4">
@@ -35,10 +37,13 @@ export default function EventSchedule({ title, scheduleData }: EventScheduleProp
                   {day.date}
                 </span>
               </h3>
-              
+
               <div className="space-y-4">
                 {day.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="border-l-2 border-brand-yellow/30 pl-4 md:pl-6">
+                  <div
+                    key={itemIndex}
+                    className="border-l-2 border-brand-yellow/30 pl-4 md:pl-6"
+                  >
                     <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
                       <div className="font-share-tech text-brand-yellow font-medium text-lg md:text-xl whitespace-nowrap">
                         {item.time}
@@ -62,5 +67,5 @@ export default function EventSchedule({ title, scheduleData }: EventScheduleProp
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -82,9 +82,14 @@ export default function ConferencePage() {
 
         <ContentSection
           title="TICKETS"
-          content="Tickets will be available soon."
+          content={[
+            "Tickets are just £50 — heavily subsidised thanks to Umbraco HQ.",
+            "Limited to 80 attendees, so book early to avoid missing out!",
+          ]}
         >
-          <PatternButton disabled>Buy Tickets</PatternButton>
+          <PatternButton href="https://www.tickettailor.com/events/umbukfdn/1804177">
+            Buy Tickets
+          </PatternButton>
         </ContentSection>
       </div>
     </main>

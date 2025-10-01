@@ -45,7 +45,7 @@ export default function EventSchedule({
                     className="border-l-2 border-brand-yellow/30 pl-4 md:pl-6"
                   >
                     <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6">
-                      <div className="font-share-tech text-brand-yellow font-medium text-lg md:text-xl whitespace-nowrap">
+                      <div className="font-share-tech text-brand-yellow font-medium text-lg md:text-xl whitespace-nowrap min-w-[100px] md:min-w-[120px]">
                         {item.time}
                       </div>
                       <div className="flex-1 space-y-1">

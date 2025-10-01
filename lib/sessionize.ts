@@ -2,7 +2,7 @@
 
 // Configuration
 const SESSIONIZE_API_BASE = "https://sessionize.com/api/v2/q3a4fzac/view";
-const CACHE_REVALIDATE_SECONDS = 0; // Set to 0 for no cache, or 3600 for 1 hour
+const CACHE_REVALIDATE_SECONDS = 3600; // Set to 0 for no cache, or 3600 for 1 hour
 
 // Type Definitions - Speakers
 export interface Speaker {

@@ -3,6 +3,7 @@ import PatternButton from "@/components/pattern-button";
 import Hero from "@/components/hero";
 import ContentSection from "@/components/content-section";
 import EventSchedule, { type ScheduleDay } from "@/components/event-schedule";
+import SpeakersGrid from "@/components/speakers-grid";
 
 export default function ConferencePage() {
   // Schedule data
@@ -71,14 +72,7 @@ export default function ConferencePage() {
 
         <EventSchedule title="Event Schedule" scheduleData={scheduleData} />
 
-        <ContentSection
-          title="Speakers"
-          content="We're looking for passionate speakers to share their Umbraco knowledge and experience. Submit your talk proposal and be part of this amazing community event."
-        >
-          <PatternButton href="https://sessionize.com/umbraco-in-the-city-2025/">
-            Submit your talk
-          </PatternButton>
-        </ContentSection>
+        <SpeakersGrid />
 
         <ContentSection
           title="TICKETS"

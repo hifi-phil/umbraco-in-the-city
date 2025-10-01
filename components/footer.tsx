@@ -31,6 +31,10 @@ export default function Footer({ copyrightText, showBeeIcon = true }: FooterProp
               Home
             </Link>
             <span>•</span>
+            <Link href="/schedule" className="underline hover:no-underline">
+              Schedule
+            </Link>
+            <span>•</span>
             <Link href="/code-of-conduct" className="underline hover:no-underline">
               Code of Conduct
             </Link>

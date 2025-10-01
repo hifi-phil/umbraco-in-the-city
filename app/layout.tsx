@@ -51,7 +51,7 @@ export default function RootLayout({
         <div className="text-white min-h-screen overflow-hidden relative">
           <Header
             targetDate={targetDate}
-            statusText="TICKETS ON SALE"
+            statusText="<20 TICKETS LEFT"
             buttonText={{
               mobile: "Buy Now",
               desktop: "Buy Tickets",

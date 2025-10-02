@@ -44,6 +44,8 @@ export default function ConferencePage() {
           activity: "Umbraco In The City Event",
           description:
             "Main conference day with talks, workshops, and networking",
+          link: "/schedule",
+          linkText: "View Schedule",
         },
       ],
     },

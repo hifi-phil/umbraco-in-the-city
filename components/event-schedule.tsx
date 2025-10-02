@@ -2,6 +2,8 @@ interface ScheduleItem {
   time: string;
   activity: string;
   description?: React.ReactNode;
+  link?: string;
+  linkText?: string;
 }
 
 interface ScheduleDay {
@@ -16,6 +18,8 @@ interface EventScheduleProps {
 }
 
 export type { ScheduleItem, ScheduleDay };
+
+import Link from "next/link";
 
 export default function EventSchedule({
   title,
@@ -56,6 +60,14 @@ export default function EventSchedule({
                           <p className="font-share-tech text-base md:text-lg leading-relaxed text-white">
                             {item.description}
                           </p>
+                        )}
+                        {item.link && item.linkText && (
+                          <Link
+                            href={item.link}
+                            className="font-share-tech text-base md:text-lg text-white hover:text-brand-yellow transition-colors underline hover:no-underline inline-block pt-1"
+                          >
+                            {item.linkText} →
+                          </Link>
                         )}
                       </div>
                     </div>

@@ -106,11 +106,31 @@ export default function ScheduleGrid({
                 <div className={isServiceOrLunch ? "bg-gray-900 p-4 md:p-6" : "bg-brand-dark p-4 md:p-6"}>
                   {isServiceOrLunch ? (
                     // Service Session - Non-clickable
-                    <div>
-                      <h3 className="font-share-tech text-lg md:text-xl font-bold text-white">
-                        {session.title}
-                      </h3>
-                    </div>
+                    <>
+                      <div className="mb-2">
+                        <span className="font-share-tech text-xs md:text-sm text-white/80">
+                          {startTime} → {duration} min
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="font-share-tech text-lg md:text-xl font-bold text-white">
+                          {session.title}
+                        </h3>
+                        {session.speakers && session.speakers.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {session.speakers.map((speaker) => (
+                              <button
+                                key={speaker.id}
+                                onClick={() => handleSpeakerClick(speaker.id)}
+                                className="font-share-tech text-sm md:text-base text-white/90 hover:text-brand-yellow transition-colors underline"
+                              >
+                                {speaker.name}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </>
                   ) : (
                     // Regular Session - Clickable
                     <>
